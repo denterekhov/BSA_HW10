@@ -1,4 +1,3 @@
-let shortid = require('shortid');
 export function addUser({id,name}) {
   return {
     type: 'ADD_USER',
@@ -11,5 +10,12 @@ export function deleteUser(id) {
   return {
     type: 'DELETE_USER', 
     id
+  }
+}
+
+export function onFilter (value) {
+  return {
+    type: 'FILTER_USERS', 
+    value
   }
 }

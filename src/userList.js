@@ -6,9 +6,8 @@ import UserItem from './userItem';
 
 
 class UserList extends Component {
-z
   render() {
-    const userList = this.props.users.map(obj => 
+    const userList = this.props.usersToDisplay.map(obj => 
       <UserItem key={obj.id} user={obj.user} id={obj.id} deleteUser={this.props.deleteUser} />,
     )
     return (
@@ -21,7 +20,7 @@ z
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users
+    usersToDisplay: state.usersToDisplay
   }
 };
 
